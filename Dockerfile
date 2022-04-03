@@ -1,7 +1,7 @@
 FROM ruby:3.0.0
 
 RUN apt-get update -yqq
-RUN apt-get intall -yqq --no-install-recommends nodejs
+RUN apt-get install -yqq --no-install-recommends nodejs
 
 COPY . /usr/src/app/
 ARG SECRET_KEY_BASE
