@@ -23,7 +23,7 @@ jobs:
   build:
     working_directory: ~/todo_list
     docker:
-      - image: cimg/ruby:3.1.1
+      - image: cimg/ruby:3.1.0
     steps:
       - checkout
       - setup_remote_docker
@@ -41,7 +41,7 @@ jobs:
           command: docker run -p 3000:3000 -d $IMAGE_NAME
   deploy:
     docker:
-      - image: cimg/ruby:3.1.1
+      - image: cimg/ruby:3.1.0
     steps:
       - run:
           name: deploy-application
