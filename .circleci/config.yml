@@ -12,8 +12,8 @@ workflows:
             branches:
               only:
                 - main
-            requires:
-              - build
+          requires:
+            - build
 
 
 orbs:
