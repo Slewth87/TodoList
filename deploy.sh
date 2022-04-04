@@ -3,10 +3,10 @@
 CURRENT_INSTANCE=$(sudo docker ps -a -q --filter ancestor="$IMAGE_NAME" --format="{{.ID}}")
 
 # Stop the instance if there is one
-if [ "$CURRENT_INSTANCE"]
+if [ "$CURRENT_INSTANCE" ]
 then
     sudo docker rm $(sudo docker stop $CURRENT_INSTANCE)
-filter
+fi
 
 # Get instance from dockhub
 sudo docker pull $IMAGE_NAME
